@@ -7,7 +7,9 @@ buildscript {
     maven("https://jitpack.io")
   }
   dependencies {
-    classpath("au.com.mebank.integration:riverhilldrive:0.0.1-3-gf2aa65a")
+//    classpath("au.com.mebank.integration:riverhilldrive:0.0.1-3-gf2aa65a")
+//    classpath("com.github.johnlayton:riverhilldrive:0.0.1")
+    classpath("com.github.johnlayton.riverhilldrive:integration.gradle.plugin:0.0.1-3-gf2aa65a")
   }
   configurations {
     classpath {
@@ -53,8 +55,8 @@ allprojects {
   apply(plugin = "java")
 //
   apply(plugin = "plugin-version")
-  apply(plugin = "plugin-group")
-
+//  apply(plugin = "plugin-group")
+  setGroup("au.com.mebank.integration.soap")
 
   repositories {
     jcenter()
