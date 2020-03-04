@@ -7,9 +7,9 @@ buildscript {
     maven("https://jitpack.io")
   }
   dependencies {
-//    classpath("au.com.mebank.integration:riverhilldrive:0.0.1-3-gf2aa65a")
-//    classpath("com.github.johnlayton:riverhilldrive:0.0.1")
-    classpath("com.github.johnlayton.riverhilldrive:integration.gradle.plugin:0.0.1-3-gf2aa65a")
+//    classpath("au.com.mebank.integration:riverhilldrive:0.0.1-4-g6a53bf3")
+    classpath("com.github.johnlayton:riverhilldrive:0.0.2")
+//    classpath("com.github.johnlayton.riverhilldrive:integration.gradle.plugin:0.0.2")
   }
   configurations {
     classpath {

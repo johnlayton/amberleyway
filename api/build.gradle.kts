@@ -11,6 +11,7 @@ plugins {
 //    id("plugin-wsdl") version "0.0.1"
 //    id("plugin-utils")
   id("plugin-wsdl")
+  id("plugin-utils")
 }
 
 /*
@@ -52,3 +53,4 @@ publishing {
     }
   }
 }
+
