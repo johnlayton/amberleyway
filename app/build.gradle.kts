@@ -41,10 +41,12 @@ dependencies {
 */
   kapt("org.springframework.boot:spring-boot-configuration-processor:+")
 
+  implementation(project(path = ":api"))
 //  implementation("au.com.mebank.integration.soap", "api", "f11d25a")
-  implementation("au.com.mebank.integration.soap", "api", "+")
+//  implementation("au.com.mebank.integration.soap", "api", "+")
+  implementation(project(path = ":model"))
 //  implementation("au.com.mebank.integration.soap:model:f11d25a")
-  implementation("au.com.mebank.integration.soap", "model", "+")
+//  implementation("au.com.mebank.integration.soap", "model", "+")
 
   implementation("org.springframework.boot:spring-boot-starter-webflux:${springVersion}")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

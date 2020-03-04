@@ -20,8 +20,8 @@ plugins {
 val springVersion :String by project
 dependencies {
   kapt("org.springframework.boot:spring-boot-configuration-processor:${springVersion}")
-//  api(project(path = ":api"))
-  api("au.com.mebank.integration.soap", "api", "+")
+  api(project(path = ":api"))
+//  api("au.com.mebank.integration.soap", "api", "+")
   implementation("org.springframework.boot:spring-boot-starter-webflux:${springVersion}")
 }
 

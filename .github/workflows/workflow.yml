@@ -19,23 +19,7 @@ jobs:
       with:
         java-version: 11
 
-    - name: Publish the Model
+    - name: Gradle Build
       uses: eskatos/gradle-command-action@v1
       with:
-        arguments: model:pTML
-
-    - name: Publish the API
-      uses: eskatos/gradle-command-action@v1
-      with:
-        arguments: api:pTML
-
-    - name: Publish the SAL
-      uses: eskatos/gradle-command-action@v1
-      with:
-        arguments: sal:pTML
-
-    - name: Publish the APP
-      uses: eskatos/gradle-command-action@v1
-      with:
-        arguments: app:pTML
-#      run: ./gradlew build
+        arguments: clean build
