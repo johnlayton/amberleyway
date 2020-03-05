@@ -39,7 +39,7 @@ dependencies {
   implementation(project(path = ":model"))
   implementation(project(path = ":api"))
 */
-  kapt("org.springframework.boot:spring-boot-configuration-processor:+")
+  kapt("org.springframework.boot", "spring-boot-configuration-processor", springVersion)
 
   implementation(project(path = ":api"))
 //  implementation("au.com.mebank.integration.soap", "api", "f11d25a")
@@ -48,12 +48,12 @@ dependencies {
 //  implementation("au.com.mebank.integration.soap:model:f11d25a")
 //  implementation("au.com.mebank.integration.soap", "model", "+")
 
-  implementation("org.springframework.boot:spring-boot-starter-webflux:${springVersion}")
-  implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+  implementation("org.springframework.boot", "spring-boot-starter-webflux", springVersion)
+  implementation("com.fasterxml.jackson.module", "jackson-module-kotlin")
 
-  implementation("org.apache.cxf:cxf-spring-boot-starter-jaxws:${apacheCXFVersion}")
+  implementation("org.apache.cxf", "cxf-spring-boot-starter-jaxws", apacheCXFVersion)
 
-  implementation("org.springframework.ws:spring-ws-core")
+  implementation("org.springframework.ws", "spring-ws-core")
 
   testImplementation("org.springframework.boot:spring-boot-starter-test") {
     exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
