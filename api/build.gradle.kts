@@ -1,8 +1,26 @@
 plugins {
-  `java-library`
-  `maven-publish`
+
+  id("java-library")
 
   kotlin("jvm")
+  kotlin("kapt")
+//  kotlin("plugin.spring")
+//
+//  id("org.springframework.boot")
+//  id("io.spring.dependency-management")
+
+//  id("com.google.cloud.tools.jib")
+
+  id("publishing")
+  id("maven-publish")
+
+  id("plugin-wsdl")
+  id("plugin-utils")
+
+//  `java-library`
+//  `maven-publish`
+//
+//  kotlin("jvm")
 
   // Local plugins
 //    id("integration")
@@ -10,8 +28,6 @@ plugins {
 //    id("plugin-version")
 //    id("plugin-wsdl") version "0.0.1"
 //    id("plugin-utils")
-  id("plugin-wsdl")
-  id("plugin-utils")
 }
 
 /*

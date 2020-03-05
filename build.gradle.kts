@@ -24,6 +24,8 @@ plugins {
 //  base
 //  java
 //  publishing
+  `java`
+  `maven`
 
   `kotlin-dsl`
   `maven-publish`
@@ -53,9 +55,13 @@ allprojects {
 //
   apply(plugin = "base")
   apply(plugin = "java")
+
+  apply(plugin = "maven")
 //
   apply(plugin = "plugin-version")
 //  apply(plugin = "plugin-group")
+
+
   setGroup("au.com.mebank.integration.soap")
 
   repositories {
