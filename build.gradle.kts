@@ -7,9 +7,7 @@ buildscript {
     maven("https://jitpack.io")
   }
   dependencies {
-    classpath("com.github.johnlayton", "riverhilldrive", "0.0.3")
-//    classpath("au.com.mebank.integration:riverhilldrive:0.0.1-4-g6a53bf3")
-//    classpath("com.github.johnlayton.riverhilldrive:integration.gradle.plugin:0.0.2")
+    classpath("com.github.johnlayton", "riverhilldrive", "0.0.5")
   }
   configurations {
     classpath {
@@ -51,18 +49,15 @@ plugins {
 //  maven("https://jitpack.io")
 //}
 
-allprojects {
+subprojects {
 //
   apply(plugin = "base")
   apply(plugin = "java")
 
   apply(plugin = "maven")
-//
+
   apply(plugin = "plugin-version")
-//  apply(plugin = "plugin-group")
-
-
-  setGroup("au.com.mebank.integration.soap")
+  apply(plugin = "plugin-group")
 
   repositories {
     jcenter()
@@ -70,20 +65,20 @@ allprojects {
     mavenCentral()
     maven("https://jitpack.io")
   }
-//
+
   dependencies {
     implementation(kotlin("stdlib-jdk8", "1.3.61"))
   }
-//
-//  tasks.withType<Test> {
-//    useJUnitPlatform()
-//  }
-//
+
+  tasks.withType<Test> {
+    useJUnitPlatform()
+  }
+
   java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
   }
-//
+
   tasks.withType<KotlinCompile> {
     kotlinOptions {
       freeCompilerArgs = listOf("-Xjsr305=strict")
