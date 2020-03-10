@@ -7,7 +7,7 @@ buildscript {
     maven("https://jitpack.io")
   }
   dependencies {
-    classpath("com.github.johnlayton", "riverhilldrive", "0.0.5")
+    classpath("com.github.johnlayton", "riverhilldrive", "0.0.6")
   }
   configurations {
     classpath {
@@ -19,9 +19,7 @@ buildscript {
 }
 
 plugins {
-//  base
-//  java
-//  publishing
+  `base`
   `java`
   `maven`
 
@@ -49,15 +47,13 @@ plugins {
 //  maven("https://jitpack.io")
 //}
 
-subprojects {
+allprojects {
 //
   apply(plugin = "base")
   apply(plugin = "java")
 
   apply(plugin = "maven")
 
-  apply(plugin = "plugin-version")
-  apply(plugin = "plugin-group")
 
   repositories {
     jcenter()
@@ -85,6 +81,11 @@ subprojects {
       jvmTarget = "11" // JavaVersion.VERSION_11
     }
   }
+}
+
+subprojects {
+  apply(plugin = "plugin-version")
+  apply(plugin = "plugin-group")
 }
 
 val gradleWrapperVersion: String by project
