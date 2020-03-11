@@ -19,12 +19,10 @@ buildscript {
 }
 
 plugins {
-  `base`
-  `java`
-  `maven`
+  id("base")
+  id("java")
 
-  `kotlin-dsl`
-  `maven-publish`
+  id("maven-publish")
 
   kotlin("jvm") version "1.3.61" apply false
   kotlin("kapt") version "1.3.61" apply false
@@ -35,25 +33,19 @@ plugins {
   id("org.springframework.boot") version "2.2.0.RELEASE" apply false
 
   id("com.google.cloud.tools.jib") version "2.0.0" apply false
-
-  // Local plugins
-//  id("plugin-version")
-//  id("plugin-group")
 }
 
-//repositories {
-//  mavenLocal()
-//  mavenCentral()
-//  maven("https://jitpack.io")
-//}
+repositories {
+  jcenter()
+  mavenLocal()
+  mavenCentral()
+  maven("https://jitpack.io")
+}
+
 
 allprojects {
-//
   apply(plugin = "base")
   apply(plugin = "java")
-
-  apply(plugin = "maven")
-
 
   repositories {
     jcenter()
@@ -84,6 +76,7 @@ allprojects {
 }
 
 subprojects {
+  apply(plugin = "publishing")
   apply(plugin = "plugin-version")
   apply(plugin = "plugin-group")
 }
