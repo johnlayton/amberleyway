@@ -1,8 +1,8 @@
-package com.github.johnlayton.soap.service.sal.config
+package com.github.johnlayton.amberleyway.sal.config
 
 import com.github.johnlayton.soap.service.api.model.DemoService
-import com.github.johnlayton.soap.service.sal.client.DemoClient
-import com.github.johnlayton.soap.service.sal.client.DemoWebClient
+import com.github.johnlayton.amberleyway.sal.client.AmberleyWayClient
+import com.github.johnlayton.amberleyway.sal.client.DemoWebClient
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean
@@ -19,9 +19,9 @@ import javax.validation.Valid
 //)
 //
 @Configuration
-@EnableConfigurationProperties(ClientProperties::class)
+@EnableConfigurationProperties(AmberleyWayProperties::class)
 //@ConfigurationProperties(prefix = "service")
-class ClientConfig(@Valid private val clientProperties: ClientProperties) {
+class AmberleyWayConfig(@Valid private val clientProperties: AmberleyWayProperties) {
 //@ConstructorBinding
 //constructor
 
@@ -33,7 +33,7 @@ class ClientConfig(@Valid private val clientProperties: ClientProperties) {
 //                     val account : String)
 
   @Bean
-  fun client(demoService : DemoService): DemoClient {
+  fun client(demoService : DemoService): AmberleyWayClient {
 //    val account : Account = Regex("([0-9]{6})\\-([0-9]{9})").find("foo")?.destructured?.let { (bsb, account) -> Account() } ?: Account()
 //    { (bsb, account) ->
 //      return Account(bsb, account)

@@ -8,8 +8,7 @@ logging:
   level:
     root: ERROR
     org.springframework.web: DEBUG
-    au.com.mebank.service: DEBUG
-    au.com.mebank.service.handler: DEBUG
+    con.github.johnlayton: DEBUG
 
 cxf:
   path: /service

@@ -1,4 +1,4 @@
-package com.github.johnlayton.soap.service.app
+package com.github.johnlayton.amberleyway.app
 
 import org.testcontainers.containers.DockerComposeContainer
 import java.io.File

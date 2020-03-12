@@ -1,4 +1,4 @@
-package com.github.johnlayton.soap.service.app
+package com.github.johnlayton.amberleyway.app
 
 import org.slf4j.LoggerFactory
 import org.springframework.boot.Banner

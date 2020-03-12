@@ -1,6 +1,6 @@
-package com.github.johnlayton.soap.service.app.config
+package com.github.johnlayton.amberleyway.app.config
 
-import com.github.johnlayton.soap.service.app.service.DemoServicePortImpl
+import com.github.johnlayton.amberleyway.app.service.AmberleyWayServiceImpl
 import org.apache.cxf.Bus
 import org.apache.cxf.binding.soap.SoapBindingFactory
 import org.apache.cxf.bus.spring.SpringBus
@@ -13,7 +13,7 @@ import javax.xml.ws.Endpoint
 
 
 @Configuration
-class DemoConfig
+class AmberleyWayConfig
 @Autowired
 constructor( /* val bus: Bus */) {
 
@@ -46,8 +46,8 @@ constructor( /* val bus: Bus */) {
 
   @Bean
   fun endpoint(bus: Bus): Endpoint {
-    val endpoint = EndpointImpl(bus, DemoServicePortImpl(), SoapBindingFactory.SOAP_12_BINDING)
-    endpoint.publish("/demo")
+    val endpoint = EndpointImpl(bus, AmberleyWayServiceImpl(), SoapBindingFactory.SOAP_12_BINDING)
+    endpoint.publish("/amberleyway")
     return endpoint
   }
 

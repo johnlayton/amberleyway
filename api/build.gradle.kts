@@ -13,9 +13,9 @@ plugins {
 
 wsdlToJava {
   wsdls {
-    register("demo") {
-      wsdl.set(file("${projectDir}/src/demo/resources/demo.wsdl"))
-      pkgs.put("http://mebank.com.au/service", "com.github.johnlayton.soap.service.api.model")
+    register("amberleyway") {
+      wsdl.set(file("${projectDir}/src/amberleyway/resources/amberleyway.wsdl"))
+      pkgs.put("http://mebank.com.au/service", "com.github.johnlayton.amberleyway.api")
     }
   }
 }

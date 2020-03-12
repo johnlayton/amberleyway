@@ -1,11 +1,43 @@
-.java-version
-.jsenv-version
+# --- Intellij ---
+/*.iml
+/.gradle
+/.idea
 
-## Project files
+# --- Eclipse ---
+/.settings
+/.classpath
+/.project
 
-.idea/
-.gradle/
+# --- VsCode ---
 
-build/
+.vscode
 
-api/src/demo/java/
+*.log
+mb.pid
+node_modules
+npm-debug.log
+.env
+
+# --- Mac ---
+
+.DS_Store
+
+# --- Build ---
+
+/build
+/out
+/bin
+
+*/build
+
+# --- Generated ---
+
+/api/src/amberleyway/java
+
+# --- Tools ---
+
+dump.rdb
+
+# --- Resources ---
+
+/app/src/main/resources/logback-spring.xml
