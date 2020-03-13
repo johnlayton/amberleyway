@@ -1,6 +1,6 @@
 package com.github.johnlayton.amberleyway.sal.config
 
-import com.github.johnlayton.amberleyway.AmberleyWay
+import com.github.johnlayton.amberleyway.api.model.AmberleyWay
 import com.github.johnlayton.amberleyway.sal.client.AmberleyWayClient
 import com.github.johnlayton.amberleyway.sal.client.AmberleyWayClientImpl
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean

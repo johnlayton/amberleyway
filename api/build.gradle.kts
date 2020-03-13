@@ -15,7 +15,7 @@ wsdlToJava {
   wsdls {
     register("amberleyway") {
       wsdl.set(file("${projectDir}/src/amberleyway/resources/amberleyway.wsdl"))
-      pkgs.put("http://mebank.com.au/service", "com.github.johnlayton.amberleyway.api")
+      pkgs.put("http://johnlayton.github.com/amberleyway", "com.github.johnlayton.amberleyway.api.model")
     }
   }
 }
