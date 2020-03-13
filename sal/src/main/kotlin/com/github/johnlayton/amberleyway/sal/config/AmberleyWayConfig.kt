@@ -1,8 +1,8 @@
 package com.github.johnlayton.amberleyway.sal.config
 
-import com.github.johnlayton.soap.service.api.model.DemoService
+import com.github.johnlayton.amberleyway.AmberleyWay
 import com.github.johnlayton.amberleyway.sal.client.AmberleyWayClient
-import com.github.johnlayton.amberleyway.sal.client.DemoWebClient
+import com.github.johnlayton.amberleyway.sal.client.AmberleyWayClientImpl
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean
@@ -33,7 +33,7 @@ class AmberleyWayConfig(@Valid private val clientProperties: AmberleyWayProperti
 //                     val account : String)
 
   @Bean
-  fun client(demoService : DemoService): AmberleyWayClient {
+  fun client(amberleyWay : AmberleyWay): AmberleyWayClient {
 //    val account : Account = Regex("([0-9]{6})\\-([0-9]{9})").find("foo")?.destructured?.let { (bsb, account) -> Account() } ?: Account()
 //    { (bsb, account) ->
 //      return Account(bsb, account)
@@ -41,19 +41,19 @@ class AmberleyWayConfig(@Valid private val clientProperties: AmberleyWayProperti
 
 
 
-    return DemoWebClient(demoService)
+    return AmberleyWayClientImpl(amberleyWay)
 //    return DemoWebClient(clientProperties.address)
   }
 
   @Bean
-  fun demoService() : DemoService {
+  fun demoService() : AmberleyWay {
     val jaxWsProxyFactoryBean = JaxWsProxyFactoryBean()
-    jaxWsProxyFactoryBean.serviceClass = DemoService::class.java
+    jaxWsProxyFactoryBean.serviceClass = AmberleyWay::class.java
     jaxWsProxyFactoryBean.address = clientProperties.address
     jaxWsProxyFactoryBean.bindingId = SOAPBinding.SOAP12HTTP_BINDING
 //    jaxWsProxyFactoryBean.features.add(customSoapFeature)
 
-    return jaxWsProxyFactoryBean.create() as DemoService
+    return jaxWsProxyFactoryBean.create() as AmberleyWay
   }
 
 //  @Bean
