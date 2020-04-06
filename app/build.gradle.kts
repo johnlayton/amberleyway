@@ -84,7 +84,7 @@ publishing {
 
 jib {
   to {
-    image = "johnlayton/riverhilldrive-soap-service"
+    image = "johnlayton/amberleyway"
     credHelper = "osxkeychain"
   }
 }
