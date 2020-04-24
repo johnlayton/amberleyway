@@ -24,7 +24,25 @@ publishing {
   publications {
     create<MavenPublication>("default") {
       from(components["java"])
+//      from(components["amberleyway"])
     }
   }
 }
 
+//configurations {
+//  create("spi")
+//}
+//
+//tasks.register<Jar>("spiJar") {
+//  archiveBaseName.set("api-spi")
+//  from(project.the<SourceSetContainer>()["amberleyway"].output)
+////  include("org/gradle/sample/api/**")
+//}
+//
+//artifacts {
+//  add("spi", tasks["spiJar"])
+//}
+
+//artifacts {
+//  add("all", tasks["jar"])
+//}
