@@ -36,6 +36,8 @@ plugins {
 }
 
 apply(plugin = "plugin-upgrade")
+//apply(plugin = "plugin-libraries")
+apply(plugin = "plugin-navigate")
 
 repositories {
   jcenter()
