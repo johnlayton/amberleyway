@@ -40,4 +40,4 @@ dump.rdb
 
 # --- Resources ---
 
-/app/src/main/resources/logback-spring.xml
+#/app/src/main/resources/logback-spring.xml

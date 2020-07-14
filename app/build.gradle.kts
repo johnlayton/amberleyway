@@ -51,6 +51,7 @@ dependencies {
 //  implementation("au.com.mebank.integration.soap", "model", "+")
 
   implementation("org.springframework.boot", "spring-boot-starter-webflux", springVersion)
+  implementation("org.springframework.boot", "spring-boot-starter-actuator", springVersion)
   implementation("com.fasterxml.jackson.module", "jackson-module-kotlin")
 
   implementation("org.apache.cxf", "cxf-spring-boot-starter-jaxws", apacheCXFVersion)
@@ -87,6 +88,7 @@ publishing {
 jib {
   to {
     image = "johnlayton/amberleyway"
+    tags = setOf(project.version as String)
     credHelper = "osxkeychain"
   }
 }
