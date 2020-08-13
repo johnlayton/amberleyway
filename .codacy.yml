@@ -1,0 +1,4 @@
+---
+engines:
+  spotbugs:
+    enabled: true
