@@ -84,11 +84,11 @@ subprojects {
   apply(plugin = "plugin-version")
   apply(plugin = "plugin-group")
 }
-
-val gradleWrapperVersion: String by project
-tasks {
-  wrapper {
-    gradleVersion = gradleWrapperVersion
-    distributionType = Wrapper.DistributionType.ALL
-  }
-}
+//
+//val gradleWrapperVersion: String by project
+//tasks {
+//  wrapper {
+//    gradleVersion = gradleWrapperVersion
+//    distributionType = Wrapper.DistributionType.ALL
+//  }
+//}
